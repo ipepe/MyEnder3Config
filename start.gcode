@@ -1,8 +1,12 @@
 ; Ender 3 Custom Start G-code
+M300 S500 P100 ; play sound to notify that print started
+
 M140 S{material_bed_temperature}
 M104 S{material_print_temperature}
 M190 S{material_bed_temperature}
 M109 S{material_print_temperature}
+
+M300 S500 P200 ; play sound to notify that print started
 
 G28 ; Home all axes
 M420 S1; retreive mesh bed leveling
